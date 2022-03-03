@@ -13,8 +13,4 @@ class ColorGate {
         ? darkModeColor
         : lightModeColor;
   }
-
-  static Color? byTheme() {
-    return null;
-  }
 }
