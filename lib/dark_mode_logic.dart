@@ -1,7 +1,20 @@
 library dark_mode_logic;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+import 'package:flutter/material.dart';
+
+/// Color Gate Class.
+class ColorGate {
+  /// Determines the color to return based on the theme brightness of your app.
+  static Color? byMode(
+      {Color? lightModeColor,
+      Color? darkModeColor = Colors.white,
+      required BuildContext context}) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? darkModeColor
+        : lightModeColor;
+  }
+
+  static Color? byTheme() {
+    return null;
+  }
 }
